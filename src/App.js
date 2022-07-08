@@ -21,10 +21,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='launch' element={<Launch />}>
-          <Route path='/launch' element={<LaunchIndex />} />
-          <Route path='air-jordan-1-zoom-racer-blue' element={<LaunchShoe />} />
-          <Route path='air-jordan-3-valor-blue' element={<LaunchShoe />} />
-          <Route path='jordan-mars-270-london' element={<LaunchShoe />} />
+          <Route path='' element={<LaunchIndex />} />
+          <Route path=':slug' element={<LaunchShoe />} />
+          {/* <Route path='air-jordan-3-valor-blue' element={<LaunchShoe />} />
+          <Route path='jordan-mars-270-london' element={<LaunchShoe />} /> */}
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>

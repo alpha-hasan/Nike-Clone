@@ -18,6 +18,8 @@ const shoes = {
     }
 };
 
+
+
 export const LaunchIndex = () => {
     return (
         <div id="carouselExampleDark" className="container carousel carousel-dark slide" style={{ maxWidth: '35%' }} data-bs-interval="false">
@@ -27,24 +29,14 @@ export const LaunchIndex = () => {
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div className="carousel-inner">
-                <Link className={'carousel-item active'} to={'air-jordan-1-zoom-racer-blue'}>
-                    <img src={shoes['air-jordan-1-zoom-racer-blue'].img} className="d-block w-100" alt={shoes['air-jordan-1-zoom-racer-blue'].name} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>{shoes['air-jordan-1-zoom-racer-blue'].name}</h5>
-                    </div>
-                </Link>
-                <Link className={'carousel-item'} to={'air-jordan-3-valor-blue'}>
-                    <img src={shoes['air-jordan-3-valor-blue'].img} className="d-block w-100" alt={shoes['air-jordan-3-valor-blue'].name} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>{shoes['air-jordan-3-valor-blue'].name}</h5>
-                    </div>
-                </Link>
-                <Link className={'carousel-item'} to={'jordan-mars-270-london'}>
-                    <img src={shoes['jordan-mars-270-london'].img} className="d-block w-100" alt={shoes['air-jordan-1-zoom-racer-blue'].name} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>{shoes['jordan-mars-270-london'].name}</h5>
-                    </div>
-                </Link>
+                {Object.entries(shoes).map(([slug, { name, img }]) =>
+                    <Link key={slug} className={'carousel-item active'} to={`/launch/${slug}`}>
+                        <img src={img} className="d-block w-100" alt={name} />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>{name}</h5>
+                        </div>
+                    </Link>
+                )}
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
