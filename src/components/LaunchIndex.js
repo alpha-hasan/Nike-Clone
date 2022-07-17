@@ -29,7 +29,7 @@ export const LaunchIndex = () => {
             </div>
             <div className="carousel-inner">
                 {Object.entries(shoes).map(([slug, { name, img }], index) =>
-                    <Link key={slug} className={`carousel-item ${index == 0 ? 'active' : ''}`} to={`/launch/${slug}`}>
+                    <Link key={slug} className={`carousel-item ${index === 0 ? 'active' : ''}`} to={`/launch/${slug}`}>
                         <img src={img} className="d-block w-100" alt={name} />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>{name}</h5>
