@@ -27,17 +27,17 @@ export const LaunchShoe = () => {
     let navigate = useNavigate()
     return (
         // <div>LaunchShoe {slug}</div>
-        <div class="container col-xxl-9 px-4 d-flex">
-            <div class="row flex-lg-row-reverse align-items-center g-5">
-                <div class="col-sm col-lg-6">
-                    <img src={shoes[slug] ? shoes[slug].img : 'Not Found'} class="d-block mx-lg-auto img-fluid" alt="Shoes" width="700" height="500" />
+        <div className="container col-xxl-9 px-4 d-flex">
+            <div className="row flex-lg-row-reverse align-items-center g-5">
+                <div className="col-sm col-lg-6">
+                    <img src={shoes[slug] ? shoes[slug].img : 'Not Found'} className="d-block mx-lg-auto img-fluid" alt="Shoes" width="700" height="500" />
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="display-5 fw-bold lh-1 mb-3">{shoes[slug] ? shoes[slug].name : 'Not Found'}</h1>
-                    <p class="lead">{shoes[slug] ? shoes[slug].desc : 'Not Found'}</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <div className="col-lg-6">
+                    <h1 className="display-5 fw-bold lh-1 mb-3">{shoes[slug] ? shoes[slug].name : 'Not Found'}</h1>
+                    <p className="lead">{shoes[slug] ? shoes[slug].desc : 'Not Found'}</p>
+                    <div className="d-grid gap-2 d-md-flex justify-content-md-start">
                         <button type="button" className="btn btn-outline-dark btn-lg px-4 me-md-2" style={{ borderRadius: '30px' }}>Buy Now</button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4" style={{ borderRadius: '30px' }} onClick={() => navigate('/launch')}>Go Back</button>
+                        <button type="button" className="btn btn-outline-secondary btn-lg px-4" style={{ borderRadius: '30px' }} onClick={() => navigate('/launch')}>Go Back</button>
                     </div>
                 </div>
             </div>

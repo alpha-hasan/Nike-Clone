@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 const shoes = {
     "air-jordan-3-valor-blue": {
@@ -29,8 +28,8 @@ export const LaunchIndex = () => {
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div className="carousel-inner">
-                {Object.entries(shoes).map(([slug, { name, img }]) =>
-                    <Link key={slug} className={'carousel-item active'} to={`/launch/${slug}`}>
+                {Object.entries(shoes).map(([slug, { name, img }], index) =>
+                    <Link key={slug} className={`carousel-item ${index == 0 ? 'active' : ''}`} to={`/launch/${slug}`}>
                         <img src={img} className="d-block w-100" alt={name} />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>{name}</h5>
