@@ -24,7 +24,7 @@ function App() {
           {/* <Route path='air-jordan-3-valor-blue' element={<LaunchShoe />} />
           <Route path='jordan-mars-270-london' element={<LaunchShoe />} /> */}
         </Route>
-        <Route path='*' element={<Home />} />
+        <Route path='/*' element={<Home />} />
       </Routes>
     </Router>
   );
