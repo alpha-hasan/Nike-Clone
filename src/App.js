@@ -10,7 +10,6 @@ import { Home } from './components/Home';
 import { Launch } from './components/Launch';
 import { Navbar } from './components/Navbar';
 import { LaunchIndex } from './components/LaunchIndex';
-import { NotFound } from './components/NotFound';
 import { LaunchShoe } from './components/LaunchShoe';
 
 function App() {
